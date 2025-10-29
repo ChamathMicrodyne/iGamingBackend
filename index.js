@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import footerRouter from "./routes/footerRouter.js";
 import newsRouter from "./routes/newsRouter.js";
+import categoryitemRouter from "./routes/categoryRouter.js";
 
 dotenv.config();
 const app = express();
@@ -36,6 +37,7 @@ mongoose
 // Routes
 //app.use("/api/user", userRouter);
 app.use("/api/news", newsRouter);
+app.use("/api/category", categoryitemRouter);
 //app.use("/api/navbaritem", navbaritemRouter);
 //app.use("/api/footer", footerRouter);
 
